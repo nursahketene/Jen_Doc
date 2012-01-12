@@ -1,0 +1,47 @@
+From Manage Jenkins 
+Managing your jenkins through this tab. 
+
+# Configure System
+This is where you make your system wide configuration. Many of the plugins that you install will be here to. 
+
+It is the most important party of Jenkins. 
+
+## HOME DIRECTORY is the where your data files and other Jenkins related stuff goes. By default it is in $HIOME/.jenkis/ of course this can be changed.
+
+## SYSTEM MESSAGES has no affect on the system at all but it is rather for distributing information. When you want to give notifications or a system description you can write it here. It also has a nice feature that can take html tags. You can also preview what ever you have added without saving. 
+
+## QUITE PERIOD is useful for those who are using cvs to commit their changes one by one instead of using git alike version control systems that commits changes atomically which means it commits all of the changes at once as single unit. The problem with CVS is that when you commit a file with changes it would be inconsistent if Jenkins would build it right away. it would destabilizes the build before the other changes even had chance to be committed. So the Quite period takes a value that would wait the amount of the value of seconds until it starts a build. 
+
+
+# Reload Configuration from Disk
+Jenkins stores all of its system wide and build job configurations  as XML files in home directory. The Jenkins home directory is by default .jenkins/ in HOME path. It also stores all of the build history in the same directory. When you need to archive or migrate old jenkins builds to the new one you need to add and remove those build jobs and put them in Jenkins's builds directory. To get them on the screen you don't need to go offline. You can click "Reload Configuration from the Disk". Jenkins will handle the rest. 
+
+# Manage Plugins
+
+You can manage install, update, and remove plugins from here. Note that there are hundreds of plugins and that would help you in many ways. But be careful when removing plugins since it might be affecting your Jenkins stability. 
+
+# System Information
+
+This screen will be showing JAVA system properties and and a system environment variables. You can find here things like the version of Java Jenkins running what user is running under and so forth. You can use this screen as a help for troubleshooting. 
+
+#System Log
+
+This screen will provide the logs for again troubleshooting purposes. One nice feature is that you can subscribe to RSS feeds like ERROR messages or WARNING log messages as a system administrator. 
+
+# Load Statistic
+Here you can see the situation with the server in terms of the number of concurrent builds and the length of the build queue. This screen will help you to understand if you need to add extra capacity or extra build notes to your infrastructure. 
+
+# Script console
+
+This is screen is for really expert Jenkins users since it requires a strong knowledge of the internal Jenkins architecture. It is mainly useful for plugin developers and so on. 
+
+# Manage Nodes
+Jenkins handles parallel and distributed builds well. You will set how many builds you want to run in parallel and if you are using distributed builds you can set up build notes. Build notes are different machines that Jenkins can use to execute its builds. 
+
+# Prepare for shutdown
+If you need to shut down Jenkins while there is a build executed, you can select this option to shutdown Jenkins cleanly. This link will prepare any new job to be started and when all of the builds are finished Jenkins will shutdown gracefully. 
+
+
+
+
+ 
