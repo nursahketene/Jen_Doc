@@ -37,7 +37,16 @@ NOTE! Jenkins sometimes might not be able to install the JDK. This might occur i
 Jenkins comes with 3 principle build tools. Maven, Ant, and Bash scripting or for windows Batch scripting. You can extend the support for build tools with plugins. 
 
 ## MAVEN
-
+MAVEN is a scripting language used to build java applications using standard life cycle and directory structure. 
+Jenkins provides good support for Maven and has a good understanding of dependencies and directory structure.
+You can install Maven automatically or provide a path to the local Maven installation. You can configure as many versions of Maven as you like.
+"name MAVEN 2.2.1"
+"MAVEN_HOME/usr/local/maven"
+If you want to install automatically check the checkbox. Jenkins will automatically download and install the requested version of Jenkins for you.
+Here you can specify to intall the version of the requested Maven from Apache Server or provide a (local) url of your choice.
+Sometimes you might need Maven to do some heavy weight jobs. In this case it would be wise to give Maven some extra memory. To do that simply go to "MAVEN PROJECT CONTROLER" and in "Global MAVEN_OPTS" add 
+"-Xmx512m"
+"-XX:MaxPermSize=128m"
 
 
 
