@@ -14,7 +14,12 @@ It is the most important party of Jenkins.
 
 ## USER ACCOUNT MANAGEMENT is also done here. By default Jenkins gives full rights to all users. If you want to restrict some users you should do it ENABLE SECURITY field.
 
+### GLOBAL PROPERTIES ###
 
+Every change you add to the Global Properties will be available for all build jobs. You can add as many properties as you like.
+
+## ENVIRONMENT VARIABLES 
+Here you specify the environment to use for maven build jobs. When invoking these variables you can use $key or ${key}
 
 
 # Reload Configuration from Disk
