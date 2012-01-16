@@ -79,6 +79,11 @@ Jenkins handles parallel and distributed builds well. You will set how many buil
 If you need to shut down Jenkins while there is a build executed, you can select this option to shutdown Jenkins cleanly. This link will prepare any new job to be started and when all of the builds are finished Jenkins will shutdown gracefully. 
 
 
-
+#Installing "ROBOT FRAMEWORK" to Jenkins
+To install Robot Framework for Jenkins simply go to manage plugins and tick the checkbox for the plugin and install it. 
+FAIL! One problem occured during the automatic installation. The problem is that Jenkins is timing out without being able to connect ERROR: Operation timed out at java.net.ConnectException
+Fix! Manual installation. Download the jenkins plugin to jenkins/plugins directory
+Obstacle! Succes running Robot Framework with teste cases but, We were unsuccessful to deliberately fail the tests. For some reason Jenkins always passes them.
+NOTE! Publishing Robot output "Log/Report Link" should be only the file name without the PATH. Otherwise it can find the page but it won't complain either. 
 
  
