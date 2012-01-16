@@ -12,6 +12,10 @@ It is the most important party of Jenkins.
 
 ## QUITE PERIOD is useful for those who are using cvs to commit their changes one by one instead of using git alike version control systems that commits changes atomically which means it commits all of the changes at once as single unit. The problem with CVS is that when you commit a file with changes it would be inconsistent if Jenkins would build it right away. it would destabilizes the build before the other changes even had chance to be committed. So the Quite period takes a value that would wait the amount of the value of seconds until it starts a build. 
 
+## USER ACCOUNT MANAGEMENT is also done here. By default Jenkins gives full rights to all users. If you want to restrict some users you should do it ENABLE SECURITY field.
+
+
+
 
 # Reload Configuration from Disk
 Jenkins stores all of its system wide and build job configurations  as XML files in home directory. The Jenkins home directory is by default .jenkins/ in HOME path. It also stores all of the build history in the same directory. When you need to archive or migrate old jenkins builds to the new one you need to add and remove those build jobs and put them in Jenkins's builds directory. To get them on the screen you don't need to go offline. You can click "Reload Configuration from the Disk". Jenkins will handle the rest. 
