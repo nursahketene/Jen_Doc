@@ -33,6 +33,12 @@ You can have multiple version on JAVA.
 If you haven't manually downloaded JAVA version to your machine you can tick "Install automatically" which Jenkins will download and install the Java version automatically.
 NOTE! Jenkins sometimes might not be able to install the JDK. This might occur in case Jenkins does not recognize the OS or can't find the server and so on. 
 
+# Configuring BUild Tools
+Jenkins comes with 3 principle build tools. Maven, Ant, and Bash scripting or for windows Batch scripting. You can extend the support for build tools with plugins. 
+
+## MAVEN
+
+
 
 
 # Reload Configuration from Disk
