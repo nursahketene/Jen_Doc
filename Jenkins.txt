@@ -1,7 +1,7 @@
 From Manage Jenkins 
 Managing your jenkins through this tab. 
 
-# Configure System
+### Configure System ###
 This is where you make your system wide configuration. Many of the plugins that you install will be here to. 
 
 It is the most important party of Jenkins. 
@@ -14,12 +14,25 @@ It is the most important party of Jenkins.
 
 ## USER ACCOUNT MANAGEMENT is also done here. By default Jenkins gives full rights to all users. If you want to restrict some users you should do it ENABLE SECURITY field.
 
-### GLOBAL PROPERTIES ###
+# GLOBAL PROPERTIES
 
 Every change you add to the Global Properties will be available for all build jobs. You can add as many properties as you like.
 
 ## ENVIRONMENT VARIABLES 
 Here you specify the environment to use for maven build jobs. When invoking these variables you can use $key or ${key}
+
+# JDK
+
+Jenkins as it started historically build for Java build jobs. Therefor it has superb Build in Java support. 
+In JDK section you will add a JAVA version to be used to build java applications. By default Jenkins uses whatever JAVA it can find in the system path which Jenkins also runs. However it may be good for development and performance issues to use the latest java version in some cases in the production environment there might be an old version of JAVA.
+The easiest way to to supply a JAVA version to Jenkins to build applications with is manually enter them. Like supply 
+"name Java 1.6.0"
+"JAVA_HOME/usr/java/jdk_1.6.0_17"
+name and JAVA_HOME variables can be anything that fits in this case. 
+You can have multiple version on JAVA. 
+If you haven't manually downloaded JAVA version to your machine you can tick "Install automatically" which Jenkins will download and install the Java version automatically.
+NOTE! Jenkins sometimes might not be able to install the JDK. This might occur in case Jenkins does not recognize the OS or can't find the server and so on. 
+
 
 
 # Reload Configuration from Disk
