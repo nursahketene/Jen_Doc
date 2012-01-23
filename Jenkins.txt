@@ -1,6 +1,27 @@
 From Manage Jenkins 
 Managing your jenkins through this tab. 
 
+### Installing and Running ###
+
+# Installing the package
+go to jenkins website and install the package that suits your OS
+
+# Running & stoping instaled package
+sudo launchctl load /Library/LaunchDaemons/org.jenkins-ci.plist
+
+sudo launchctl unload /Library/LaunchDaemons/org.jenkins-ci.plist
+
+# Installing the executable package
+go to jenkins website and install the .war file.
+
+#Running & stoping Jenkins
+from the terminal go to the direcotry where your jenkins.war file resides and run
+
+java -jar jenkins.war
+
+to stop it ctrl + C 
+
+
 ### Configure System ###
 This is where you make your system wide configuration. Many of the plugins that you install will be here to. 
 
@@ -53,7 +74,7 @@ Sometimes you might need Maven to do some heavy weight jobs. In this case it wou
 # Reload Configuration from Disk
 Jenkins stores all of its system wide and build job configurations  as XML files in home directory. The Jenkins home directory is by default .jenkins/ in HOME path. It also stores all of the build history in the same directory. When you need to archive or migrate old jenkins builds to the new one you need to add and remove those build jobs and put them in Jenkins's builds directory. To get them on the screen you don't need to go offline. You can click "Reload Configuration from the Disk". Jenkins will handle the rest. 
 
-# Manage Plugins
+# manage Plugins
 
 You can manage install, update, and remove plugins from here. Note that there are hundreds of plugins and that would help you in many ways. But be careful when removing plugins since it might be affecting your Jenkins stability. 
 
@@ -86,4 +107,17 @@ Fix! Manual installation. Download the jenkins plugin to jenkins/plugins directo
 Obstacle! Succes running Robot Framework with teste cases but, We were unsuccessful to deliberately fail the tests. For some reason Jenkins always passes them.
 NOTE! Publishing Robot output "Log/Report Link" should be only the file name without the PATH. Otherwise it can find the page but it won't complain either. 
 
- 
+
+### Different Build Jobs ###
+
+# Freestyle software project
+If you want to have flexibility choosing this option is wise. It is a general purpose build job.
+
+# Maven Project
+If you have a maven project it would be wise to use Maven Bild Job. Mavan will understand the pom files and the project structure. Jenkins will understand Maven pom files.
+
+# Monitor and External Job                                                                                                                                                                        
+Monitoring external jobs that usually run on as a scheduled job in Unix env. example cron
+
+# Multiconfiguration Jobs
+This is when you want to run the same project in many different configurations. Its also called "matrix project"
