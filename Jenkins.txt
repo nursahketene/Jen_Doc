@@ -121,3 +121,43 @@ Monitoring external jobs that usually run on as a scheduled job in Unix env. exa
 
 # Multiconfiguration Jobs
 This is when you want to run the same project in many different configurations. Its also called "matrix project"
+
+### TomCat & Jenkins ###
+
+It is pretty straight forward to use Jenkins on TomCat
+
+First
+Download TomCat version 5 or later from http://tomcat.apache.org/download-55.cgi
+
+After the download extract the tar.gz file and go to PATH_TO/apache-tomcat-<version_number>/webapps/ in your terminal or file browser and delete everthing inside it.
+The files inside are TomCats web front end files so it has no effect on your TomCat
+
+Second 
+Download jenkins.war file from http://mirrors.jenkins-ci.org/war/latest/jenkins.war and rename it to ROOT.war and place it under PATH_TO/apache-tomcat-<version_number>/webapps/
+
+Third
+Go to your PATH_TO/apache-tomcat-<version_number>/bin/ in Terminal and run
+
+$export CATALINA_OPTS="-DJENKINS_HOME=/path/to/jenkins_home/ -Xmx512m" ##Don't forget to change path to and jenkins_home accordingly. by default jenkins_home is ~/.jenkins
+$./catalina.sh start
+
+This will start TomCats serverlet container.
+It will create ROOT folder and other things in webapps folder.
+You will see something like below. Don't worry that means everything works.
+
+Using CATALINA_BASE:   HOME_PATH/Downloads/apache-tomcat-5.5.35
+Using CATALINA_HOME:   HOME_PATH/Downloads/apache-tomcat-5.5.35
+Using CATALINA_TMPDIR: HOME_PATH/Downloads/apache-tomcat-5.5.35/temp
+Using JRE_HOME:        /System/Library/Frameworks/JavaVM.framework/Versions/1.5/Home
+Using CLASSPATH:       HOME_PATH/Downloads/apache-tomcat-5.5.35/bin/bootstrap.jar
+
+When you are done you can stop catelina changing "start" to "stop"
+
+fifth
+Starting your TomCat to lunch Jenkins
+$./startup.sh 
+
+Now in your browser type the following address http://localhost:8080/
+
+And you are done.
+
